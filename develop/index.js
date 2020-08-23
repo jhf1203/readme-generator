@@ -32,16 +32,16 @@ const writeFileAsync = util.promisify(fs.writeFile);
             message: "Tell me a little bit about your project.  I'd love to know the what, how, and why behind it.",
             name: "promptFileDescription"
         },
-        // {
-        //     type: "editor",
-        //     message: "Great, thanks!  Next we need some installation instructions.  Provide me a step-by-step on how to get your application running.",
-        //     name: "promptFileInstallation"
-        // },
-        // {
-        //     type: "editor",
-        //     message: "Sounds good, let's keep going.  How is your application going to be used?  Please map out a step-by-step walkthrough for your users.",
-        //     name: "promptFileUsage"
-        // },
+        {
+            type: "editor",
+            message: "Great, thanks!  Next we need some installation instructions.  Provide me a step-by-step on how to get your application running.",
+            name: "promptFileInstallation"
+        },
+        {
+            type: "editor",
+            message: "Sounds good, let's keep going.  How is your application going to be used?  Please map out a step-by-step walkthrough for your users.",
+            name: "promptFileUsage"
+        },
         {
             type: "list",
             message: "Great stuff!  Let's make it official and apply the appropriate licensing to this project",
@@ -52,38 +52,40 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
     .then((answers) => {
 
-    const myReadMe = `###${answers.promptFileName}
+    const myReadMe = 
     
-    ##Table Of Contents
-    1.  Application Description
-    2.  Installation instructions
-    3.  Program Usage
+`# ${answers.promptFileName}
     
-    _________________________________
-
-    #Application Description
+## Table Of Contents
+1.  Application Description
+2.  Installation instructions
+3.  Program Usage
     
-    ${answers.promptFileDescription}
+_________________________________
+
+### Application Description
     
-    _________________________________
+${answers.promptFileDescription}
+    
+_________________________________
 
-    #Installation instructions
+### Installation instructions
 
-    ${answers.promptFileInstallation}
+${answers.promptFileInstallation}
 
-    _________________________________
+_________________________________
 
-    #Program Usage
+### Program Usage
 
-    ${answers.promptFileUsage}
+${answers.promptFileUsage}
 
-    _________________________________
+_________________________________
 
-    #Contact the Author
-    ${answers.promptUserName}
-    ${answers.promptUserEmail}
-    ${answers.promptUserGithub}
-    `;
+### Contact the Author
+${answers.promptUserName}
+${answers.promptUserEmail}
+${answers.promptUserGithub}
+`;
 
     fs.writeFile("myReadMe.md", myReadMe, () => {
         console.log("done!");
