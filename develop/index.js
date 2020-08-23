@@ -85,7 +85,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
     ${answers.promptUserGithub}
     `;
 
-    fs.writeFile("readMe.txt", myReadMe, () => {
+    fs.writeFile("readMe.md", myReadMe, () => {
         console.log("done!");
     })
 
