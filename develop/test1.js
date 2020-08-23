@@ -1,38 +1,45 @@
-var inquirer = require("inquirer");
+const inquirer = require("inquirer");
+const fs = require("fs");
 
-function askInputs() {
+
+
     return inquirer.prompt([
         {
-            type:"input",
-            message:"test",
-            name:"testAnswer1"
+        type:"input",
+        message:"test",
+        name:"testAnswer1"
         },
         {
-            type:"input",
-            message:"testing",
-            name:"testAnswer2"
+        type:"input",
+        message:"testing",
+        name:"testAnswer2"
         }
     ])
 
-}
+    .then(function (whatever) {
 
-function askConfirms() { 
-    inquirer.prompt([
-        {
-        type:"confirm",
-        message: "Is this a confirm question?",
-        name: "contributorAnswer"
-        }
-    ])
-}
+    const text = `
+    Test ReadMe lives here!
 
-askInputs()
-    .then(askConfirms)
-.then((answer) => {
-    console.log(answer);
-        if (answer === true) {
-            console.log("true");
-        } else {
-            console.log("false");
-    }
-})
+    ${whatever.testAnswer1}
+
+    =========
+
+    some text!  And then ${whatever.testAnswer2}
+    
+    `;
+    fs.writeFile("testxt.txt", text, () => {
+        console.log("written!");
+    });
+    })
+
+
+    
+
+
+    
+
+
+
+
+
