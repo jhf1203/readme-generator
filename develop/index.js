@@ -57,6 +57,46 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
     .then((answers) => {
 
+    if (answers.promptFileUserLicense === "Apache License 2.0") {
+        let licenseURL = "https://www.apache.org/licenses/LICENSE-2.0"
+
+    } else if (answers.promptFileUserLicense === "GNU General Public License v3.0") {
+        let licenseURL = "https://www.gnu.org/licenses/gpl-3.0.en.html"
+
+    } else if (answers.promptFileUserLicense === "MIT License") {
+        let licenseURL = "https://opensource.org/licenses/MIT"
+
+    } else if (answers.promptFileUserLicense === "BSD 2-Clause License") {
+        let licenseURL = "https://opensource.org/licenses/BSD-2-Clause"
+
+    } else if (answers.promptFileUserLicense === "BSD 3-Clause License") {
+        let licenseURL = "https://opensource.org/licenses/BSD-3-Clause";
+
+    } else if (answers.promptFileUserLicense === "Boost Software License 1.0") {
+        let licenseURL = "https://www.boost.org/LICENSE_1_0.txt";
+
+    } else if (answers.promptFileUserLicense === "Creative Commons Zero v1.0 Universal") {
+        let licenseURL = "https://creativecommons.org/publicdomain/zero/1.0/legalcode";
+
+    } else if (answers.promptFileUserLicense === "Eclipse Public License 2.0") {
+        let licenseURL = "https://www.eclipse.org/legal/epl-2.0/";
+
+    } else if (answers.promptFileUserLicense === "GNU Affero General Public License v3.0") {
+        let licenseURL = "https://www.gnu.org/licenses/agpl-3.0.en.html";
+
+    } else if (answers.promptFileUserLicense === "GNU General Public License v2.0") {
+        let licenseURL = "https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html";
+
+    } else if (answers.promptFileUserLicense === "GNU Lesser Public License v2.1") {
+        let licenseURL = "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html";
+
+    } else if (answers.promptFileUserLicense === "Mozilla Public License 2.0") {
+        let licenseURL = "https://www.mozilla.org/en-US/MPL/2.0/";
+
+    } else {
+        let licenseURL = "https://unlicense.org/";
+    }
+
     const myReadMe = 
     
 `# ${answers.promptFileName}
@@ -104,7 +144,7 @@ _________________________________
 
 ### License
 
-This application is licensed under the ${answers.promptFileUserLicense}
+This application is [licensed](${licenseURL}) under the ${answers.promptFileUserLicense}
 `;
 
     fs.writeFile(`${answers.promptFileName}-readMe.md`, myReadMe, () => {
