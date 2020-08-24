@@ -32,21 +32,21 @@ const writeFileAsync = util.promisify(fs.writeFile);
             message: "Okay!  Now on to the readMe.  First, what would you like to name your file?  You can leave off the file extension, I'll take care of that part.",
             name: "promptFileName"
         },
-        // {
-        //     type: "editor",
-        //     message: "Tell me a little bit about your project.  I'd love to know the what, how, and why behind it.  Just type into the text editor that pops up so you can apply line and paragraph breaks if needed.  Include any markdown you would like, this generator's lowest heading currently is h3 or '###'",
-        //     name: "promptFileDescription"
-        // },
-        // {
-        //     type: "editor",
-        //     message: "Great, thanks!  Next we need some installation instructions.  Provide me a step-by-step on how to get your application running.  This will also generate a text editor for you to use.",
-        //     name: "promptFileInstallation"
-        // },
-        // {
-        //     type: "editor",
-        //     message: "Sounds good, let's keep going.  How is your application going to be used?  Please map out a step-by-step walkthrough for your users.  This will also load in notepad for your convenience.",
-        //     name: "promptFileUsage"
-        // },
+        {
+            type: "editor",
+            message: "Tell me a little bit about your project.  I'd love to know the what, how, and why behind it.  Just type into the text editor that pops up so you can apply line and paragraph breaks if needed.  Include any markdown you would like, this generator's lowest heading currently is h3 or '###'",
+            name: "promptFileDescription"
+        },
+        {
+            type: "editor",
+            message: "Great, thanks!  Next we need some installation instructions.  Provide me a step-by-step on how to get your application running.  This will also generate a text editor for you to use.",
+            name: "promptFileInstallation"
+        },
+        {
+            type: "editor",
+            message: "Sounds good, let's keep going.  How is your application going to be used?  Please map out a step-by-step walkthrough for your users.  This will also load in notepad for your convenience.",
+            name: "promptFileUsage"
+        },
         {
             type: "list",
             message: "Great stuff!  let's make it official and apply the appropriate licensing to this project",
@@ -57,54 +57,66 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
     .then((answers) => {
         let licenseURL = ""
+        let licenseImg = ""
 
     if (answers.promptFileUserLicense === "Apache License 2.0") {
         licenseURL = "https://www.apache.org/licenses/LICENSE-2.0";
+        licenseImg = "Apache-brightgreen";
 
     } else if (answers.promptFileUserLicense === "GNU General Public License v3.0") {
-        const licenseURL = "https://www.gnu.org/licenses/gpl-3.0.en.html";
+        licenseURL = "https://www.gnu.org/licenses/gpl-3.0.en.html";
+        licenseImg = "GNUv3-green";
 
     } else if (answers.promptFileUserLicense === "MIT License") {
-        const licenseURL = "https://opensource.org/licenses/MIT";
+        licenseURL = "https://opensource.org/licenses/MIT";
+        licenseImg = "MIT-yellowgreen";
 
     } else if (answers.promptFileUserLicense === "BSD 2-Clause License") {
-        const licenseURL = "https://opensource.org/licenses/BSD-2-Clause";
+        licenseURL = "https://opensource.org/licenses/BSD-2-Clause";
+        licenseImg = "BSD2-yellow";
 
     } else if (answers.promptFileUserLicense === "BSD 3-Clause License") {
-        const licenseURL = "https://opensource.org/licenses/BSD-3-Clause";
+        licenseURL = "https://opensource.org/licenses/BSD-3-Clause";
+        licenseImg = "BSD3-yellow";
 
     } else if (answers.promptFileUserLicense === "Boost Software License 1.0") {
-        const licenseURL = "https://www.boost.org/LICENSE_1_0.txt";
+        licenseURL = "https://www.boost.org/LICENSE_1_0.txt";
+        licenseImg = "Boost-orange";
 
     } else if (answers.promptFileUserLicense === "Creative Commons Zero v1.0 Universal") {
-        const licenseURL = "https://creativecommons.org/publicdomain/zero/1.0/legalcode";
+        licenseURL = "https://creativecommons.org/publicdomain/zero/1.0/legalcode";
+        licenseImg = "CCZero-red";
 
     } else if (answers.promptFileUserLicense === "Eclipse Public License 2.0") {
-        const licenseURL = "https://www.eclipse.org/legal/epl-2.0/";
+        licenseURL = "https://www.eclipse.org/legal/epl-2.0/";
+        licenseImg = "Eclipse-blue";
 
     } else if (answers.promptFileUserLicense === "GNU Affero General Public License v3.0") {
-        const licenseURL = "https://www.gnu.org/licenses/agpl-3.0.en.html";
+        licenseURL = "https://www.gnu.org/licenses/agpl-3.0.en.html";
+        licenseImg = "GNUAffero-green";
 
     } else if (answers.promptFileUserLicense === "GNU General Public License v2.0") {
-        const licenseURL = "https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html";
+        licenseURL = "https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html";
+        licenseImg = "GNUv2-green";
 
     } else if (answers.promptFileUserLicense === "GNU Lesser Public License v2.1") {
-        const licenseURL = "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html";
+        licenseURL = "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html";
+        licenseImg = "GNULesser-green";
 
     } else if (answers.promptFileUserLicense === "Mozilla Public License 2.0") {
-        const licenseURL = "https://www.mozilla.org/en-US/MPL/2.0/";
+        licenseURL = "https://www.mozilla.org/en-US/MPL/2.0/";
+        licenseImg = "MozillaPublic-blueviolet";
 
     } else {
-        const licenseURL = "https://unlicense.org/";
+        licenseURL = "https://unlicense.org/";
+        licenseImg = "Unlicense-lightgrey"
     };
 
-    console.log(`*${answers.promptFileUserLicense}*`);
-    console.log("license url- " + licenseURL);
-
-    console.log(licenseURL + "licenseURL outside of the formula");
     const myReadMe = 
     
 `# ${answers.promptFileName}
+
+![](https://img.shields.io/badge/License-${licenseImg})
     
 ## Table Of Contents
 1.  [Description](#description)

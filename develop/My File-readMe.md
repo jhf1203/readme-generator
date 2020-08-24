@@ -1,7 +1,6 @@
-# a
+# My File
 
-![](https://img.shields.io/badge/License-Apache-orange)
-
+![](https://img.shields.io/badge/License-BSD2-yellow)
     
 ## Table Of Contents
 1.  [Description](#description)
@@ -32,18 +31,18 @@ _________________________________
 
 ### Collaborating
 
-Got an idea?  A bug to report?  Or even a thought on how the application could run more efficiently?  Log it [here](https://github.com/a/a/issues) as an issue, and we'll talk about it!
+Got an idea?  A bug to report?  Or even a thought on how the application could run more efficiently?  Log it [here](https://github.com/jhf1203/my-repo/issues) as an issue, and we'll talk about it!
 
 _________________________________
 
 ### Contact Me
 
-#### a
-- [E-mail](mailto:a)
-- [Github](a)
+#### Jim Faulkner
+- [E-mail](mailto:jhf1203@gmail.com)
+- [Github](jhf1203)
 
 _________________________________
 
 ### License
 
-This application is [licensed](https://www.apache.org/licenses/LICENSE-2.0) under the Apache License 2.0
+This application is [licensed](https://opensource.org/licenses/BSD-2-Clause) under the BSD 2-Clause License
