@@ -62,7 +62,7 @@ function getLicense(answers) {
 function generateMarkdown(answers) {
   getLicense(answers)
 
-  return `${answers.promptFileName}
+  return `#${answers.promptFileName}
 
   ![](https://img.shields.io/badge/License-${licenseImg})
       
