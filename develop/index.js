@@ -95,7 +95,7 @@ _________________________________
 ### Contact the Author
 
 #### ${answers.promptUserName}
-- [E-mail](${answers.promptUserEmail})
+- [E-mail](mailto:${answers.promptUserEmail})
 - [Github](${answers.promptUserGithub})
 
 _________________________________
