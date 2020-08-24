@@ -34,7 +34,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
         },
         {
             type: "editor",
-            message: "Tell me a little bit about your project.  I'd love to know the what, how, and why behind it.  Just type into the text editor that pops up so you can apply line and paragraph breaks if needed.  For a bulleted list just use the '-' symbol with no spaces before.",
+            message: "Tell me a little bit about your project.  I'd love to know the what, how, and why behind it.  Just type into the text editor that pops up so you can apply line and paragraph breaks if needed.  Include any markdown you would like, this generator's lowest heading currently is h3 or '###'",
             name: "promptFileDescription"
         },
         {
@@ -62,25 +62,27 @@ const writeFileAsync = util.promisify(fs.writeFile);
 `# ${answers.promptFileName}
     
 ## Table Of Contents
-1.  Application Description
-2.  Installation instructions
-3.  Program Usage
+1.  [Description](#description)
+2.  [Installation](#installation) 
+3.  [Usage](#usage)
+4.  [Collaborating](#collaborating)
+5.  [Contact](#contact)
     
 _________________________________
 
-### Application Description
+### Description
     
 ${answers.promptFileDescription}
     
 _________________________________
 
-### Installation instructions
+### Instructions
 
 ${answers.promptFileInstallation}
 
 _________________________________
 
-### Program Usage
+### Usage
 
 ${answers.promptFileUsage}
 
@@ -92,7 +94,7 @@ Got an idea?  A bug to report?  Or even a thought on how the application could r
 
 _________________________________
 
-### Contact the Author
+### Contact Me
 
 #### ${answers.promptUserName}
 - [E-mail](mailto:${answers.promptUserEmail})
