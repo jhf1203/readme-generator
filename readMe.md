@@ -50,8 +50,8 @@ If there's any functionality/step that you would like to see modified, feel free
 
 #### Supplemental | Walkthrough Videos:
 
-[Application Functionality Walkthrough](https://www.youtube.com/watch?v=J83TmIJUB-g)
-[Application Code Walkthrough](https://www.youtube.com/watch?v=wW4C2hOhweg)
+- [Application Functionality Walkthrough](https://www.youtube.com/watch?v=J83TmIJUB-g)
+- [Application Code Walkthrough](https://www.youtube.com/watch?v=wW4C2hOhweg)
   
 _________________________________
   
