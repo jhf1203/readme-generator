@@ -1,6 +1,6 @@
-#myReadMe
+# myReadMe
 
-  ![](https://img.shields.io/badge/License-BSD2-yellow)
+  ![](https://img.shields.io/badge/License-BSD3-yellow)
       
   ## Table Of Contents
   1.  [Description](#description)
@@ -13,30 +13,27 @@
   
   ### Description
       
-  #### Sample
+  #### sample h4
 
-- Example text
-- example text
-
-
-extra line break
+- ul
+- ul
+- ul
       
   _________________________________
   
   ### Instructions
   
-  test
+  ###### instructions
+
+1.  some things
+2.  more things
+3.  final thing
   
   _________________________________
   
   ### Usage
   
-  testing sample text.
-
-
-1.  ol
-2.  ol
-3.  ol
+  sample text
   
   _________________________________
   
@@ -48,7 +45,7 @@ extra line break
   
   ### Contact Me
   
-  #### Jim
+  #### Jim 
   - [E-mail](mailto:jhf1203@gmail.com)
   - [Github](jhf1203)
   
@@ -56,5 +53,5 @@ extra line break
   
   ### License
   
-  This application is [licensed](https://opensource.org/licenses/BSD-2-Clause) under the BSD 2-Clause License
+  This application is [licensed](https://opensource.org/licenses/BSD-3-Clause) under the BSD 3-Clause License
   
