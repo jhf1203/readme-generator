@@ -64,53 +64,53 @@ function generateMarkdown(answers) {
 
   return `# ${answers.promptFileName}
 
-  ![](https://img.shields.io/badge/License-${licenseImg})
+![](https://img.shields.io/badge/License-${licenseImg})
       
-  ## Table Of Contents
-  1.  [Description](#description)
-  2.  [Installation](#installation) 
-  3.  [Usage](#usage)
-  4.  [Collaborating](#collaborating)
-  5.  [Contact](#contact)
+## Table Of Contents
+1.  [Description](#description)
+2.  [Installation](#installation) 
+3.  [Usage](#usage)
+4.  [Collaborating](#collaborating)
+5.  [Contact](#contact)
       
-  _________________________________
+_________________________________
   
-  ### Description
+### Description
       
-  ${answers.promptFileDescription}
+${answers.promptFileDescription}
       
-  _________________________________
+_________________________________
   
-  ### Instructions
+### Instructions
   
-  ${answers.promptFileInstallation}
+${answers.promptFileInstallation}
   
-  _________________________________
+_________________________________
   
-  ### Usage
+### Usage
   
-  ${answers.promptFileUsage}
+${answers.promptFileUsage}
   
-  _________________________________
+_________________________________
   
-  ### Collaborating
+### Collaborating
   
-  Got an idea?  A bug to report?  Or even a thought on how the application could run more efficiently?  Log it [here](https://github.com/${answers.promptUserGithub}/${answers.promptUserRepo}/issues) as an issue, and we'll talk about it!
+Got an idea?  A bug to report?  Or even a thought on how the application could run more efficiently?  Log it [here](https://github.com/${answers.promptUserGithub}/${answers.promptUserRepo}/issues) as an issue, and we'll talk about it!
   
-  _________________________________
+_________________________________
   
-  ### Contact Me
+### Contact Me
   
-  #### ${answers.promptUserName}
-  - [E-mail](mailto:${answers.promptUserEmail})
-  - [Github](${answers.promptUserGithub})
+#### ${answers.promptUserName}
+- [E-mail](mailto:${answers.promptUserEmail})
+- [Github](${answers.promptUserGithub})
   
-  _________________________________
+_________________________________
   
-  ### License
+### License
   
-  This application is [licensed](${licenseURL}) under the ${answers.promptFileUserLicense}
-  `;
+This application is [licensed](${licenseURL}) under the ${answers.promptFileUserLicense}
+`;
 }
 
 module.exports = generateMarkdown;

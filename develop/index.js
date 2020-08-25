@@ -27,7 +27,7 @@ function askQs(){
         },
         {
             type: "input",
-            message: "Okay!  Now on to the readMe.  First, what would you like to name your file?  You can leave off the file extension, I'll take care of that part.",
+            message: "Okay!  Now on to the readMe.  First, what would you like to name your file?  You can leave off the file extension, I'll take care of that part.  It will save here by default, within the 'develop' folder.  If you would like it saved elsewhere please add the appopriate syntax before your filename.",
             name: "promptFileName"
         },
         {
