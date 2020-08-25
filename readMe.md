@@ -47,6 +47,11 @@ The intent of this generator is to make the usage as straightforward as possible
 5.  Should you wish to add anything additional (screenshots, gifs, etc) that were not inserted earlier you may modify the readMe as needed.  However, it's designed to require minimum customization/additions.
 
 If there's any functionality/step that you would like to see modified, feel free to share using the collaborate link you see in this page.
+
+#### Supplemental | Walkthrough Videos:
+
+[Application Functionality Walkthrough](https://www.youtube.com/watch?v=J83TmIJUB-g)
+[Application Code Walkthrough](https://www.youtube.com/watch?v=wW4C2hOhweg)
   
 _________________________________
   
